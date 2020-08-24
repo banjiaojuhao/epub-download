@@ -19,13 +19,7 @@ import java.nio.file.Path
 
 data class Item(val href: String, val type: String)
 
-/**
- * todo
- * 自动添加、生成META-INF、mimetype
- * 自动打包zip并且重命名为“书名 - 作者.epub”
- * 用户手动输入下载地址
- * 下载完成删除临时目录
- */
+
 fun main(args: Array<String>) = runBlocking<Unit> {
     val url = "http://reader.epubee.com/books/mobile/5f/5f80cfe69440056dc623f051c2f76246/"
     val bookId = url.substringAfter("mobile/").substringAfter("/").substringBefore("/")
