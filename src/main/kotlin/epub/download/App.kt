@@ -26,7 +26,9 @@ data class ResourceItem(val path: String, val content: ByteArray)
 private val epubPath = Path.of("epub")
 
 fun main(args: Array<String>) = runBlocking<Unit> {
-    val db = DBMaker.fileDB("cache.mapdb").make()
+    val db = DBMaker.fileDB("cache.mapdb")
+            .checksumHeaderBypass().transactionEnable()
+            .make()
     val cache = db.hashMap("cache", Serializer.STRING, Serializer.BYTE_ARRAY).createOrOpen()
 
     val httpOptions = webClientOptionsOf(
