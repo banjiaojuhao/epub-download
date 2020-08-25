@@ -1,7 +1,6 @@
 # epub-download
 
 #### todo
-* 自动添加、生成META-INF、mimetype
 * 自动打包zip并且重命名为“书名 - 作者.epub”
 * 用户手动输入下载地址
 * 下载完成删除临时目录
