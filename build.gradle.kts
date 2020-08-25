@@ -21,6 +21,7 @@ val vertxVersion = "3.9.2"
 val jsoupVersion = "1.12.1"
 val coroutineVersion = "1.3.9"
 val reflectionVersion = "1.4.0"
+val mapdbVersion = "3.0.8"
 
 dependencies {
     // Align versions of all Kotlin components
@@ -37,6 +38,9 @@ dependencies {
     implementation("io.vertx:vertx-lang-kotlin-coroutines:$vertxVersion")
 
     implementation("org.jsoup:jsoup:$jsoupVersion")
+
+
+    implementation("org.mapdb", "mapdb", mapdbVersion)
 
 
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutineVersion")
